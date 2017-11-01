@@ -18,6 +18,6 @@ export class LoginComponent implements OnInit {
   onLogin(usNm, pass) {
     // http call
 
-    this.router.navigate(['dash']);
+    this.router.navigate(['dash', usNm]);
   }
 }
