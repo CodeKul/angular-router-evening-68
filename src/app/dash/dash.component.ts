@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dash',
@@ -11,10 +11,18 @@ export class DashComponent implements OnInit {
   private usNm: string;
 
   constructor(
+    private router: Router,
     private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this.usNm = this.activatedRoute.snapshot.params['usNm'];
+    // tslint:disable-next-line:comment-format
+    //this.usNm = this.activatedRoute.snapshot.params['usNm'];
+    this.activatedRoute.params.subscribe(
+      rtPrm => this.usNm = rtPrm['usNm']
+    );
+  }
+  upUs(uN: string) {
+    this.router.navigate(['/dash', uN]);
   }
 }

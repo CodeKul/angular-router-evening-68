@@ -15,6 +15,9 @@
   <div class="card-block">
     <h4 class="card-title">Welcome {{usNm}}, to social media</h4>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <input type="text" placeholder="Update user" #uN>
+    <input type="button" value="Update" (click)="upUs(uN.value)" class="btn btn-primary">
+    
     <a [routerLink]="['/dash']" class="btn btn-primary">Go on this page</a>
   </div>
 </div>

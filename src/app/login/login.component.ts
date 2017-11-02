@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   onLogin(usNm, pass) {
     // http call
-
-    this.router.navigate(['dash', usNm]);
+    //if (usNm === 'android' && pass === 'android') {
+      this.router.navigate(['dash', usNm]);
+    //}
   }
 }
