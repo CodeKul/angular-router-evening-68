@@ -17,8 +17,11 @@ export class LoginComponent implements OnInit {
 
   onLogin(usNm, pass) {
     // http call
-    //if (usNm === 'android' && pass === 'android') {
-      this.router.navigate(['dash', usNm]);
-    //}
+
+    this.router.navigate(['dash', usNm], {
+      queryParams: {
+        smApp: 'fb'
+      }
+    });
   }
 }
