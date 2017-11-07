@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -7,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
+  myData = {
+    firstName: '',
+    lastName: '',
+    email: ''
+  };
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onFrmSub(myFrm: NgForm) {
+    console.log(this.myData);
   }
 }

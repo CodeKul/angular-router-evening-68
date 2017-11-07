@@ -2,6 +2,7 @@ import { AccountNumGuard } from './dash/account-num.guard';
 import { AppRouter } from './app.router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -21,7 +22,8 @@ import { ListingComponent } from './dash/listing.component';
   ],
   imports: [
     BrowserModule,
-    AppRouter
+    AppRouter,
+    FormsModule
   ],
   providers: [AccountNumGuard],
   bootstrap: [AppComponent]
