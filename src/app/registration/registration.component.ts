@@ -19,6 +19,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   onFrmSub(myFrm: NgForm) {
-    console.log(this.myData);
+    console.log(myFrm);
   }
 }
