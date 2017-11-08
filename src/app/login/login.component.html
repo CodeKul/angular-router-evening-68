@@ -3,6 +3,6 @@
     <input type="text" placeholder="username" #usNm/>
     <input type="password" placeholder="password" #pass/>
     <button (click)="onLogin(usNm.value,pass.value)">login</button>
-    <p class="message">Not registered? <a [routerLink]="['reg','789']" routerLinkActive="rtr">Create an account</a></p>
+    <p class="message">Not registered? <a [routerLink]="['regRec']" routerLinkActive="rtr">Create an account</a></p>
   </form>
 </div>

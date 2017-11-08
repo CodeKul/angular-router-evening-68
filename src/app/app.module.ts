@@ -2,7 +2,7 @@ import { AccountNumGuard } from './dash/account-num.guard';
 import { AppRouter } from './app.router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -10,6 +10,7 @@ import { DashComponent } from './dash/dash.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './dash/profile.component';
 import { ListingComponent } from './dash/listing.component';
+import { ReactiveRegComponent } from './reactive-reg/reactive-reg.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { ListingComponent } from './dash/listing.component';
     DashComponent,
     RegistrationComponent,
     ProfileComponent,
-    ListingComponent
+    ListingComponent,
+    ReactiveRegComponent
   ],
   imports: [
     BrowserModule,
     AppRouter,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AccountNumGuard],
   bootstrap: [AppComponent]
