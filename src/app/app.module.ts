@@ -11,6 +11,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './dash/profile.component';
 import { ListingComponent } from './dash/listing.component';
 import { ReactiveRegComponent } from './reactive-reg/reactive-reg.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { CustPipe } from './pipes/cust.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ReactiveRegComponent } from './reactive-reg/reactive-reg.component';
     RegistrationComponent,
     ProfileComponent,
     ListingComponent,
-    ReactiveRegComponent
+    ReactiveRegComponent,
+    PipesComponent,
+    CustPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

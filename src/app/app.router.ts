@@ -1,3 +1,4 @@
+import { PipesComponent } from './pipes/pipes.component';
 import { ReactiveRegComponent } from './reactive-reg/reactive-reg.component';
 import { AccountNumGuard } from './dash/account-num.guard';
 import { ListingComponent } from './dash/listing.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
     { path: 'dash/:usNm', component: DashComponent, children: dashRoutes },
     { path: 'reg/:tm', component: RegistrationComponent, canActivate: [AccountNumGuard] },
     { path: 'regRec', component: ReactiveRegComponent},
+    { path: 'pipe', component: PipesComponent},
     { path: '**', redirectTo: '' }
 ];
 
